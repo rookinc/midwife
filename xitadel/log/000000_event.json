@@ -1,0 +1,24 @@
+{
+  "schema": "xitadel.event.local.v1",
+  "event_id": "xitadel.genesis.v1:2025-12-16T21:07:15Z",
+  "ts": "2025-12-16T21:07:15Z",
+  "kind": "xitadel.genesis.v1",
+  "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+  "payload_hash": "8f37ffcab1c108dc883dbe1f442c2b825338b0c550804d14cb493216b3c5eccd",
+  "redactions": [],
+  "payload": {
+    "kind": "xitadel.genesis.v1",
+    "agent_name": "midwife",
+    "created_at": "2025-12-16T21:07:15Z",
+    "governor_kid": "midwife-local-db642758d4d2f56a",
+    "role": "bootstrap"
+  },
+  "envelope_hash": "bc347e89dfb49dc9683d3630dc78679b66c0e85d96ed7f579fb788e759a3d7f0",
+  "signatures": [
+    {
+      "kind": "ed25519",
+      "kid": "midwife-local-db642758d4d2f56a",
+      "sig": "/wLev4NDhZZ7OTjJBfdCZ8Yh4z8oKB4tbqNeMkN/itmu8+Bq1PK+cifO9QrlOqAEcPd1TeuUh1shVJZ8WWzqBg=="
+    }
+  ]
+}

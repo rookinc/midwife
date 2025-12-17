@@ -1,0 +1,33 @@
+{
+  "schema": "xitadel.event.local.v1",
+  "event_id": "known.agent.v1:2025-12-16T21:07:47Z",
+  "ts": "2025-12-16T21:07:47Z",
+  "kind": "known.agent.v1",
+  "prev": "bc347e89dfb49dc9683d3630dc78679b66c0e85d96ed7f579fb788e759a3d7f0",
+  "payload_hash": "1e0c6b48066683d33277dbd56c34cd451b4cb6b408bcc7f61356619cfb989a2f",
+  "redactions": [],
+  "payload": {
+    "kind": "known.agent.v1",
+    "agent_name": "xkernelorg",
+    "agent_role": "registry",
+    "kid": "xkorg-local-54c36e4bf96b9b01",
+    "pubkey_b64": "JKaY0RQuQ2GyIrasDJaoXk7lBqwb3xRM49o7MOYCYwA=",
+    "pubkey_sha256": "54c36e4bf96b9b01bb981d0d6e20a729da69fb05fed26380ad97e59fd64082cc",
+    "first_seen": "2025-12-16T21:07:47Z",
+    "trust": {
+      "mode": "pinned",
+      "comment": "genesis cross-validation"
+    },
+    "transport_hints": {
+      "local_root": "/data/data/com.termux/files/home/xagents/xkernelorg/xitadel"
+    }
+  },
+  "envelope_hash": "12174a8e16038c6d9f34cb3c57e667d1fc59cac01a382102a8c4e2f01b72ecc4",
+  "signatures": [
+    {
+      "kind": "ed25519",
+      "kid": "midwife-local-db642758d4d2f56a",
+      "sig": "lqZh4uzIu25JlXxSE3wBMgSrb3JJkoWhiDNPSJlK6U4UiJiGYB3xVOFmCu0l6kmfElbhKMikkMmwFpGlCeoQDA=="
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xk://schema/registry.response.toolkit.handoff.v1",
+  "type": "object",
+  "required": ["schema", "response_id", "request_id", "delivered_at", "toolpack", "issuer", "delivery"],
+  "properties": {
+    "schema": { "const": "registry.response.toolkit.handoff.v1" },
+    "response_id": { "type": "string" },
+    "request_id": { "type": "string" },
+    "delivered_at": { "type": "string" },
+    "toolpack": {
+      "type": "object",
+      "required": ["toolpack_id", "manifest_canon_sha256", "files_tree_sha256"],
+      "properties": {
+        "toolpack_id": { "type": "string" },
+        "manifest_canon_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "files_tree_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "issuer": {
+      "type": "object",
+      "required": ["name", "kid", "pubkey_sha256"],
+      "properties": {
+        "name": { "type": "string" },
+        "kid": { "type": "string" },
+        "pubkey_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "delivery": {
+      "type": "object",
+      "required": ["by", "from_path", "to_path"],
+      "properties": {
+        "by": { "type": "string", "enum": ["midwife"] },
+        "from_path": { "type": "string" },
+        "to_path": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

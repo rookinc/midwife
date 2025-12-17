@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xk://schema/registry.request.toolkit.v1",
+  "type": "object",
+  "required": ["schema", "request_id", "requested_at", "agent", "toolpack_id"],
+  "properties": {
+    "schema": { "const": "registry.request.toolkit.v1" },
+    "request_id": { "type": "string" },
+    "requested_at": { "type": "string" },
+    "agent": {
+      "type": "object",
+      "required": ["name", "root"],
+      "properties": {
+        "name": { "type": "string" },
+        "root": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "toolpack_id": { "type": "string" }
+  },
+  "additionalProperties": true
+}

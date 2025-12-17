@@ -1,0 +1,23 @@
+{
+  "policy": "midwife",
+  "version": "1.0",
+  "role": "substrate-witness",
+  "allowed": [
+    "create_directories",
+    "install_public_substrate",
+    "facilitate_handshake",
+    "record_birth_event",
+    "verify_toolkits"
+  ],
+  "forbidden": [
+    "generate_keys",
+    "sign_manifests",
+    "issue_identity",
+    "grant_authority",
+    "execute_agent_tools"
+  ],
+  "assertions": [
+    "All cryptographic material must originate externally.",
+    "All actions must be attributable to a human initiator."
+  ]
+}

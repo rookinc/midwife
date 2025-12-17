@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xk://schema/toolpack.manifest.v1",
+  "type": "object",
+  "required": ["schema", "toolpack_id", "issuer", "created_at", "payload_dir", "files", "hashes"],
+  "properties": {
+    "schema": { "const": "toolpack.manifest.v1" },
+    "toolpack_id": { "type": "string", "minLength": 3 },
+    "issuer": {
+      "type": "object",
+      "required": ["name", "kid", "pubkey_sha256"],
+      "properties": {
+        "name": { "type": "string" },
+        "kid": { "type": "string" },
+        "pubkey_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "created_at": { "type": "string" },
+    "payload_dir": { "type": "string" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hashes": {
+      "type": "object",
+      "required": ["manifest_canon_sha256", "files_tree_sha256"],
+      "properties": {
+        "manifest_canon_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "files_tree_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

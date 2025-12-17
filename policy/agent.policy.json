@@ -1,0 +1,19 @@
+{
+  "policy": "agent",
+  "version": "1.0",
+  "birth_state": {
+    "knows_xitadel_exists": true,
+    "can_write_private_xitadel": false,
+    "has_governor_keys": false
+  },
+  "inherent_capabilities": [
+    "read_public_toolpacks",
+    "request_toolkits",
+    "execute_received_tools",
+    "generate_own_keys"
+  ],
+  "unlock_conditions": {
+    "write_private_xitadel": "governor_keypair_present",
+    "sign_events": "governor_keypair_present"
+  }
+}

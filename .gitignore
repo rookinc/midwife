@@ -2,3 +2,11 @@ __pycache__/
 *.pyc
 .env
 .venv/
+
+# ==== ABSOLUTE NO-KEY ZONE ====
+xitadel/keys/
+**/xitadel/keys/
+*.pem
+*.priv
+*.key
+*secret*

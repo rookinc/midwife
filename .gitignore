@@ -1,7 +1,3 @@
-__pycache__/
-*.pyc
-.env
-.venv/
 
 # ==== ABSOLUTE NO-KEY ZONE ====
 xitadel/keys/
@@ -10,3 +6,7 @@ xitadel/keys/
 *.priv
 *.key
 *secret*
+# Xitadel secrets (never commit)
+xitadel/keys/*.priv
+xitadel/keys/*.pem
+secure/
